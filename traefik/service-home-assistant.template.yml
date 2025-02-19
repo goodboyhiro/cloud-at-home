@@ -1,4 +1,4 @@
-# traefik-homeassistant.yaml (dynamic config file)
+# service-home-assistant.template.yaml (traefik dynamic config file)
 http:
   routers:
     homeassistant-router:
