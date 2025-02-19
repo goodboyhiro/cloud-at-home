@@ -1,0 +1,16 @@
+# traefik-homeassistant.yaml (dynamic config file)
+http:
+  routers:
+    homeassistant-router:
+      rule: "Host(`home.${HOSTNAME}`)"
+      service: homeassistant-service
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: myresolver
+
+  services:
+    homeassistant-service:
+      loadBalancer:
+        servers:
+          - url: "http://homeassistant.local:8123"
