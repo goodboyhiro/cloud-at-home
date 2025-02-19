@@ -13,4 +13,4 @@ http:
     homeassistant-service:
       loadBalancer:
         servers:
-          - url: "http://homeassistant.local:8123"
+          - url: "http://homeassistant.lan:8123"
